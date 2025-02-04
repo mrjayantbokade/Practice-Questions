@@ -8,15 +8,30 @@ public class RemoveInplaceDuplicates {
 
         int index = 0;
         int i = 1;
+
+//        brute force approach
+
+//        while (i != arr.length){
+//            if (arr[index] == arr[i] ){
+//                i++;
+//            }else {
+//
+//                index++;
+//                int temp = arr[index];
+//                arr[index] = arr[i];
+//                arr[i] = temp;
+//                i++;
+//            }
+//        }
+
+//        optimized approach
+
         while (i != arr.length){
-            if (arr[index] == arr[i] ){
+            if (arr[index] != arr[i]){
+                index++;
+                arr[index] = arr[i];
                 i++;
             }else {
-
-                index++;
-                int temp = arr[index];
-                arr[index] = arr[i];
-                arr[i] = temp;
                 i++;
             }
         }
