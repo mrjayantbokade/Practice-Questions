@@ -44,7 +44,6 @@ public class MoveZerosToEnd {
         int position = 0;
         int i = 1;
         while (i < arr.length){
-            System.out.println(Arrays.toString(arr));
             if (arr[position] == 0 && arr[i] != 0){
 
                 int temp = arr[position];
