@@ -7,7 +7,7 @@ public class LonestConsecutive {
     public static void main(String[] args) {
 
 
-        int[] arr = { 102, 4, 100, 1, 101, 3, 2, 1, 1};
+        int[] arr = { 1, 2, 0, 1};
 
         System.out.println(better(arr));
     }
@@ -16,6 +16,7 @@ public class LonestConsecutive {
     public static int better(int[] arr){
 
         Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
         int longest = 1;
         int currCount = 0;
         int lastSmaller = Integer.MIN_VALUE;
@@ -25,9 +26,11 @@ public class LonestConsecutive {
             if (arr[i] - 1 == lastSmaller ){
                 currCount++;
                 lastSmaller = arr[i];
-            } else if (arr[i]-1 != lastSmaller ) {
+            } else if (arr[i] == lastSmaller) {
                 lastSmaller = arr[i];
+            }else {
                 currCount = 1;
+                lastSmaller = arr[i];
             }
 
             longest = Integer.max(longest, currCount);
