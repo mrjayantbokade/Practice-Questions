@@ -20,6 +20,10 @@ public class LonestConsecutive {
         int longest = 1;
         int currCount = 0;
         int lastSmaller = Integer.MIN_VALUE;
+        String str2 = "nayan";
+        StringBuilder str = new StringBuilder("nayan");
+        String temp = str.toString();
+        System.out.println(str2 == str.reverse().toString());
 
         for (int i = 0; i < arr.length; i++) {
 
