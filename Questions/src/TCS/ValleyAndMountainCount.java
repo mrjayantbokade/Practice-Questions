@@ -16,7 +16,10 @@ public class ValleyAndMountainCount {
             if (str.charAt(i) == 'U'){
                 count++;
 
-                if (count == 0) up = false;
+                if (count == 0) {
+                    down = false;
+                    up = false;
+                }
 
                 if (count > 0 && !up){
                     up = true;
@@ -24,7 +27,10 @@ public class ValleyAndMountainCount {
                 }
             }else {
                 count--;
-                if (count == 0) down = false;
+                if (count == 0) {
+                    down = false;
+                    up = false;
+                }
 
                 if (count < 0 && !down){
                     down = true;
